@@ -69,7 +69,7 @@ app.get('/api/artisans', async (req, res) => {
 app.get('/api/artisans/:id', async (req, res) => {
   try {
     const artisan = await Artisan.findByPk(req.params.id, {
-      include: [{ model: Specialty, include: [Category] }]
+      include: [{ model: Specialty, include: [{ model: Category }] }]
     });
     if (!artisan) return res.status(404).json({ error: 'Artisan non trouvé' });
     res.json(artisan);
@@ -78,7 +78,7 @@ app.get('/api/artisans/:id', async (req, res) => {
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
+  console.log(`Serveur démarré sur le port ${PORT}`);
 });
