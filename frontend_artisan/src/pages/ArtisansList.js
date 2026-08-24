@@ -11,7 +11,7 @@ const ArtisansList = () => {
   const categoryId = queryParams.get('category');
 
   useEffect(() => {
-    let url = `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/artisans`;
+    let url = `${process.env.REACT_APP_API_URL || 'https://trouve-ton-artisan-backend-qrmv.onrender.com'}/api/artisans`;
     const params = [];
     if (categoryId) params.push(`category=${categoryId}`);
     if (search) params.push(`search=${search}`);
