@@ -6,7 +6,7 @@ const Home = () => {
   const [topArtisans, setTopArtisans] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL || 'https://trouve-ton-artisan-backend-qrmv.onrender.com'}/api/artisans/top`)
+    axios.get('https://trouve-ton-artisan-backend-qrmv.onrender.com/api/artisans/top')
       .then(res => setTopArtisans(res.data))
       .catch(err => console.error(err));
   }, []);

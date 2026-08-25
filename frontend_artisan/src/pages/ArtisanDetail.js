@@ -8,7 +8,7 @@ function ArtisanDetail() {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL || 'https://trouve-ton-artisan-backend-qrmv.onrender.com'}/api/artisans/${id}`)
+    fetch(`https://trouve-ton-artisan-backend-qrmv.onrender.com/api/artisans/${id}`)
       .then((res) => res.json())
       .then((data) => setArtisan(data))
       .catch((err) => console.error("Erreur de chargement :", err));
