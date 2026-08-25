@@ -9,9 +9,9 @@ const Header = () => {
         <Link to="/" className="navbar-brand">
           <img 
             src={`${process.env.PUBLIC_URL}/Logo.png`} 
-            alt="Logo Trouve Ton Artisan" 
-            style={{ height: '40px' }} // Tu peux ajuster la hauteur selon tes besoins
-          />
+             alt="Logo Trouve Ton Artisan" 
+             style={{ height: '70px', width: 'auto' }} 
+            />
         </Link>
 
         {/* Le reste de ton menu (liens Accueil, Bâtiment, etc.) */}
