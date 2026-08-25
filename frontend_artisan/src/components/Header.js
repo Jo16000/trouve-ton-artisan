@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                {/* --- LOGO AVEC FOND BLANC POUR LA LISIBILITÉ ET GRANDE TAILLE --- */}
+                {/* --- LOGO --- */}
                 <Link to="/" className="navbar-brand">
                     <img
                         src={`${process.env.PUBLIC_URL}/Logo.png`}
@@ -13,14 +13,14 @@ const Header = () => {
                         style={{
                             height: '80px',
                             width: 'auto',
-                            backgroundColor: 'white', // Fond blanc pour contraster
-                            padding: '5px',          // Un peu de marge autour
-                            borderRadius: '8px'      // Coins légèrement arrondis
+                            backgroundColor: 'white',
+                            padding: '5px',
+                            borderRadius: '8px'
                         }}
                     />
                 </Link>
 
-                {/* --- BOUTON HAMBURGER POUR MOBILE --- */}
+                {/* --- BOUTON MOBILE --- */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -33,23 +33,23 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                {/* --- LIENS DE NAVIGATION --- */}
+                {/* --- LIENS DE NAVIGATION (Routes propres) --- */}
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Accueil</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/artisans?category=Bâtiment">Bâtiment</Link>
+                            <Link className="nav-link" to="/batiment">Bâtiment</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/artisans?category=Alimentation">Alimentation</Link>
+                            <Link className="nav-link" to="/alimentation">Alimentation</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/artisans?category=Fabrication">Fabrication</Link>
+                            <Link className="nav-link" to="/fabrication">Fabrication</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/artisans?category=Services">Services</Link>
+                            <Link className="nav-link" to="/services">Services</Link>
                         </li>
                     </ul>
                 </div>

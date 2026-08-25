@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 // Pages de l'application
 import Home from './pages/Home';
 import ArtisansList from './pages/ArtisansList';
+import CategoryPage from './pages/CategoryPage'; // <--- Import de ta nouvelle page de catégorie
 import ArtisanDetail from './pages/ArtisanDetail';
 import LegalNotice from './pages/LegalNotice';
 import PersonalData from './pages/PersonalData';
@@ -26,7 +27,13 @@ function App() {
             {/* Page d'accueil */}
             <Route path="/" element={<Home />} />
 
-            {/* Liste globale et filtrage par catégorie */}
+            {/* Nos 4 pages de catégories spécifiques */}
+            <Route path="/batiment" element={<CategoryPage categoryName="Bâtiment" />} />
+            <Route path="/alimentation" element={<CategoryPage categoryName="Alimentation" />} />
+            <Route path="/fabrication" element={<CategoryPage categoryName="Fabrication" />} />
+            <Route path="/services" element={<CategoryPage categoryName="Services" />} />
+
+            {/* Liste globale et filtrage par recherche */}
             <Route path="/artisans" element={<ArtisansList />} />
 
             {/* Page de détail d'un artisan */}
